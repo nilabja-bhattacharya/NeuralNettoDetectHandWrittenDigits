@@ -44,7 +44,7 @@ class Network(object):
         return a
 
     def SGD(self, training_data, epochs, mini_batch_size, eta,
-            test_data=None,filenames=None):
+            test_data=None,filename=None):
         """Train the neural network using mini-batch stochastic
         gradient descent.  The ``training_data`` is a list of tuples
         ``(x, y)`` representing the training inputs and the desired
@@ -146,8 +146,7 @@ class Network(object):
         if filename:
             data = {"sizes": self.sizes,
                     "weights": [w.tolist() for w in self.weights],
-                    "biases": [b.tolist() for b in self.biases],
-                    "cost": str(self.cost.__name__)}
+                    "biases": [b.tolist() for b in self.biases]}
             f = open(filename, "w")
             json.dump(data, f)
             f.close()
@@ -163,8 +162,8 @@ def load(test_against,filename=None):
         f = open(filename, "r")
         data = json.load(f)
         f.close()
-        cost = getattr(sys.modules[__name__], data["cost"])
-        net = Network(data["sizes"], cost=cost)
+        #cost = getattr(sys.modules[__name__], data["cost"])
+        net = Network(data["sizes"])
         net.weights = [np.array(w) for w in data["weights"]]
         net.biases = [np.array(b) for b in data["biases"]]
         print "Predicted Result of Image is {0}".format(net.result(test_against))
