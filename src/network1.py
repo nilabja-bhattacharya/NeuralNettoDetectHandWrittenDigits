@@ -143,7 +143,7 @@ class Network(object):
 def sigmoid(z):
     """The sigmoid function."""
     try:
-        res=1.0/(1.0+np.exp(-z))
+        res = .5*(1.0 + np.tanh(.5*z))
     except:
         raise
     return res
