@@ -12,6 +12,8 @@ and omits many desirable features.
 #### Libraries
 # Standard library
 import random
+import json
+import sys
 
 # Third-party libraries
 import numpy as np
@@ -42,7 +44,7 @@ class Network(object):
         return a
 
     def SGD(self, training_data, epochs, mini_batch_size, eta,
-            test_data=None,test_against=None):
+            test_data=None,filenames=None):
         """Train the neural network using mini-batch stochastic
         gradient descent.  The ``training_data`` is a list of tuples
         ``(x, y)`` representing the training inputs and the desired
@@ -65,8 +67,8 @@ class Network(object):
                     j, self.evaluate(test_data), n_test)
             else:
                 print "Epoch {0} complete".format(j)
-        if test_against:
-            print "Result is {0}".format(self.result(test_against))
+        if filename:
+            self.save(filename)
 
     def update_mini_batch(self, mini_batch, eta):
         """Update the network's weights and biases by applying
@@ -138,6 +140,35 @@ class Network(object):
         """Return the vector of partial derivatives \partial C_x /
         \partial a for the output activations."""
         return (output_activations-y)
+
+    def save(self, filename=None):
+        """Save the neural network to the file ``filename``."""
+        if filename:
+            data = {"sizes": self.sizes,
+                    "weights": [w.tolist() for w in self.weights],
+                    "biases": [b.tolist() for b in self.biases],
+                    "cost": str(self.cost.__name__)}
+            f = open(filename, "w")
+            json.dump(data, f)
+            f.close()
+
+
+#### Loading a Network
+def load(test_against,filename=None):
+    """Load a neural network from the file ``filename``.  Returns an
+    instance of Network.
+
+    """
+    if filename:
+        f = open(filename, "r")
+        data = json.load(f)
+        f.close()
+        cost = getattr(sys.modules[__name__], data["cost"])
+        net = Network(data["sizes"], cost=cost)
+        net.weights = [np.array(w) for w in data["weights"]]
+        net.biases = [np.array(b) for b in data["biases"]]
+        print "Predicted Result of Image is {0}".format(net.result(test_against))
+        #return net
 
 #### Miscellaneous functions
 def sigmoid(z):
