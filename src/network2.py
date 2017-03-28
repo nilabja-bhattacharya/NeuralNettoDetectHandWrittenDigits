@@ -265,7 +265,10 @@ class Network(object):
     def result(self,test_against=None):
         """Returns the argument that has maximum value after test_against is passed through feedforward network
         It takes test_against as input and applies feedforward network to it"""
-        test_result = (np.argmax(self.feedforward(test_against)))
+        res=[]
+        res=self.feedforward(test_against)
+        #print res
+        test_result = (np.argmax(res))
         #print test_result
         return test_result
 
