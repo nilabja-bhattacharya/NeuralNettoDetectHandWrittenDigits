@@ -49,6 +49,9 @@ def load_data_wrapper(filepath=None):
     test_inputs = [np.reshape(x,(784,1)) for x in te_d[0]]
     test_data = zip(test_inputs,te_d[1])
     img=Image.open(filepath)
+    #use following commands to convert some png image to required image format
+    #convert 81.png -monochrome a1.png
+    #convert -resize 28x28 a1.png a1.png
     #img.show()
     img=img.resize((28,28))
     iar=np.array(img)
