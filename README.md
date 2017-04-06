@@ -55,7 +55,7 @@ These steps will create and save neural network model in "../models/modelx.txt".
 
 #### 2. Process any hand written image
 
-In order to test any handwritten image we need to first process it so that it matches with mnist data, to process the image we follow these steps 
+In order to test any handwritten image we need to first process it so that it matches with mnist data, to process the image we follow these steps (Image processing is done using gimp)
 
  1. convert 81.png -monochrome a1.png
  2. convert -resize 28x28 a1.png a1.png
