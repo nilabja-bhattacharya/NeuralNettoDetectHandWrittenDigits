@@ -28,12 +28,12 @@ Following python libraries are required:
 Running is based on the steps:
 
 1. Load mnist data
-2. create the model file
-3. create an image file containing a handwritten number
-4. format the handwritten number to suit mnist format
-5. predict the integer 
+2. Create the model file
+3. Create an image file containing a handwritten number
+4. Format the handwritten number to suit mnist format
+5. Predict the integer 
 
-### 1. create the model file
+### 1. Create the model file
 The easiest way is to cd to src directory where the python files are located. Then run:
 
 1. python
@@ -41,14 +41,14 @@ The easiest way is to cd to src directory where the python files are located. Th
 3. **>>>** training, validation, testing = mnist_loader.load_data_wrapper() #This step is used to load training validation and testing data
 4. import network2 #This step is used to import network2.py
 5. **>>>** net = network2.Network([784, 30, 10], cost=network2.CrossEntropyCost) # This step creates a neural network with 784 neuron in input layer, 30 neuron in 1st hidden layer, 10 neuron in output layer
-6. **>>>** net.SGD(training_data, 30, 10, 0.5,
-  ... lmbda = 5.0,                     
-  ... filename="../models/modelx.txt") 
-  ... evaluation_data=validation_data,
-  ... monitor_evaluation_accuracy=True,
-  ... monitor_evaluation_cost=True,
-  ... monitor_training_accuracy=True,
-  ... monitor_training_cost=True)
+6. **>>>** net.SGD(training_data, 30, 10, 0.5,<br>
+  ... lmbda = 5.0,  <br>                   
+  ... filename="../models/modelx.txt") <br>
+  ... evaluation_data=validation_data,<br>
+  ... monitor_evaluation_accuracy=True,<br>
+  ... monitor_evaluation_cost=True,<br>
+  ... monitor_training_accuracy=True,<br>
+  ... monitor_training_cost=True)<br>
 
 These steps will create and save neural network model in "../models/modelx.txt".
 
