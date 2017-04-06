@@ -4,19 +4,19 @@ Neural Network to Detect Handwritten Digits using python
 ## Installation and Setup
 
 ### Overview
-This project based on book by Michael Nielson (neuralnetworksanddeeplearning.com).
+This project based on book by [Michael Nielson](http://neuralnetworksanddeeplearning.com)
 
 Various folders in this project are:
 
 1. data:  It contains the mnist database
 2. digits:  It has two folders *testing* and *myimage*
 
-  1. testing: It contains various images from 0-9 that can be used for the purpose of testing the neural network
-  2. myimage: It contains 9 images written by me.
+ .. 1. testing: It contains various images from 0-9 that can be used for the purpose of testing the neural network
+ .. 2. myimage: It contains 9 images written by me.
 3. src: src folder has 3 files:
 
-  1. mnist_loader.py: Used to load mnist data that is meant for training testing and validation. Mnist Database contains 60,000, 50,000 of them is used for training purpose and rest 10,000 is used for validation and testing
-  2. network1.py: Naive neural network uses concept of **cost function**, **backpropagation** and **stochastic gradient descent**
+ .. 1. mnist_loader.py: Used to load mnist data that is meant for training testing and validation. Mnist Database contains 60,000, 50,000 of them is used for training purpose and rest 10,000 is used for validation and testing
+ .. 2. network1.py: Naive neural network uses concept of **cost function**, **backpropagation** and **stochastic gradient descent**
   3. network2.py: Advancement of network1.py has additional feature **overfitting** and **crossEntropyCost function**, in addtion to features in networ1.py
   
 4. models: It contains various models made by me, model5.txt is most efficient model of them.
@@ -72,3 +72,5 @@ To load and test the image we follow following steps:
 4. **>>>** test_against = mnist_loader.imageread("../filepath/filename_of_image")
 5. **>>>** import network2
 6. **>>>** network2.load(test_against, "../modelpath/modelname.txt") #modelpath is where the model was saved
+
+...
