@@ -17,7 +17,7 @@ Various folders in this project are:
 
  .. 1. mnist_loader.py: Used to load mnist data that is meant for training testing and validation. Mnist Database contains 60,000, 50,000 of them is used for training purpose and rest 10,000 is used for validation and testing<br>
  .. 2. network1.py: Naive neural network uses concept of **cost function**, **backpropagation** and **stochastic gradient descent**<br>
-  3. network2.py: Advancement of network1.py has additional feature **overfitting** and **crossEntropyCost function**, in addtion to features in networ1.py<br>
+ .. 3. network2.py: Advancement of network1.py has additional feature **overfitting** and **crossEntropyCost function**, in addtion to features in networ1.py<br>
   
 4. models: It contains various models made by me, model5.txt is most efficient model of them.
 
