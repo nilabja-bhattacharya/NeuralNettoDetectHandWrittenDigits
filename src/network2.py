@@ -173,6 +173,8 @@ class Network(object):
                 print "Accuracy on evaluation data: {} / {}".format(
                     self.accuracy(evaluation_data), n_data)
             print
+        print "Maximum accuracy achieved on training data: %.2f percent" % float(max(training_accuracy)/500.0)
+        print "Maximum accuracy achieved on evaluation data: %.2f percent" % float(max(evaluation_accuracy)/100.0)
         if filename:
             self.save(filename)
         #return evaluation_cost, evaluation_accuracy, \
