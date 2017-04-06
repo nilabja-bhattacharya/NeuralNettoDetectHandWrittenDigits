@@ -27,7 +27,7 @@ def load_data():
     f.close()
     return (training_data,validation_data,test_data)
 
-def load_data_wrapper(filepath=None):
+def load_data_wrapper():
     """ Return a tuple containg (training_data,validation_data,test_data) Based on load_data but the format is more convinient for use in out implementation of neural network.
 
     In particular training_data is a list of 50,000 2 tuples (x,y)
@@ -41,13 +41,15 @@ def load_data_wrapper(filepath=None):
     code."""
     tr_d,va_d,te_d = load_data()
     #print (tr_d)
-    training_inputs = [np.reshape(x,(784,1)) for x in tr_d[0]]
+    training_inputs = [np.reshape(x,(784,1)).astype('float32')/255 for x in tr_d[0]]
     training_results = [vectorized_results(y) for y in tr_d[1]]
     training_data = zip(training_inputs,training_results)
-    validation_inputs = [np.reshape(x,(784,1)) for x in va_d[0]]
+    validation_inputs = [np.reshape(x,(784,1)).astype('float32')/255 for x in va_d[0]]
     validation_data = zip(validation_inputs,va_d[1])
     test_inputs = [np.reshape(x,(784,1)) for x in te_d[0]]
     test_data = zip(test_inputs,te_d[1])
+    return (training_data,validation_data,test_data)
+def imageread(filepath):
     img=Image.open(filepath)
     #use following commands to convert some png image to required image format
     #convert 81.png -monochrome a1.png
@@ -57,9 +59,16 @@ def load_data_wrapper(filepath=None):
     iar=np.array(img)
     #print test_inputs
     #print iar
-    test_against = np.reshape(iar,(784,1))
+    test_against = np.reshape(iar,(784,1)).astype('float32')/255
     #print test_against
-    return (training_data,validation_data,test_data,test_against)
+    #low_value_indices = test_against < 0.3
+    #test_against[low_value_indices] = 0.0
+    #high_value_indices = test_against >= 0.3
+    #test_against[high_value_indices] = 1.0
+    #img1 = Image.fromarray(test_against.reshape(28,28))
+    #img1.show()
+    #print test_against
+    return test_against
 
 def vectorized_results(j):
     """Return a 10 D vector with 1.0 in jth position and zeroes elsewhere, used to convert a digit (0..9) into corresponding desired output from the neural network"""
