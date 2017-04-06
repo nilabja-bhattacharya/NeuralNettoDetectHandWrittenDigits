@@ -42,10 +42,11 @@ The easiest way is to cd to src directory where the python files are located. Th
 3. **>>>** training, validation, testing = mnist_loader.load_data_wrapper()     #This step is used to load training validation and testing data
 4. import network2 #This step is used to import network2.py
 5. **>>>** net = network2.Network([784, 30, 10], cost=network2.CrossEntropyCost) #This step creates a neural network with 784 neuron in input layer, 30 neuron in 1st hidden layer, 10 neuron in output layer
-6. **>>>** net.SGD(training_data, 30, 10, 0.5,<br>
+6. **>>>** net.large_weight_initializer()
+7. **>>>** net.SGD(training_data, 30, 10, 0.5,<br>
   ... lmbda = 5.0,<br>
-  ... filename=("../models/modelx.txt")<br>
   ... evaluation_data=validation_data,<br>
+  ... filename=("../models/modelx.txt")<br>
   ... monitor_evaluation_accuracy=True,<br>
   ... monitor_evaluation_cost=True,<br>
   ... monitor_training_accuracy=True,<br>
