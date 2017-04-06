@@ -1,10 +1,11 @@
 # Neural Network to Detect Handwritten Digits
-Neural Network to Detect Handwritten Digits using python<br>
+Neural Network to Detect Handwritten Digits using python
 
-## Installtion and Setup
+## Installation and Setup
 
 ### Overview
-This project based on book by Michael Nielson (neuralnetworksanddeeplearning.com).<br>
+This project based on book by Michael Nielson (neuralnetworksanddeeplearning.com).
+
 Various folders in this project are:
 
 1. data:  It contains the mnist database
