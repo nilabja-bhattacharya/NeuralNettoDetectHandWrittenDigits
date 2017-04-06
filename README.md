@@ -45,8 +45,8 @@ The easiest way is to cd to src directory where the python files are located. Th
 6. **>>>** net.large_weight_initializer()
 7. **>>>** net.SGD(training_data, 30, 10, 0.5,<br>
   ... lmbda = 5.0,<br>
-  ... filename=("../models/modelx.txt")<br>
   ... evaluation_data=validation_data,<br>
+  ... filename=("../models/modelx.txt")<br>
   ... monitor_evaluation_accuracy=True,<br>
   ... monitor_evaluation_cost=True,<br>
   ... monitor_training_accuracy=True,<br>
