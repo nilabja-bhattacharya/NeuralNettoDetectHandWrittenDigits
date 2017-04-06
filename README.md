@@ -1,2 +1,3 @@
 # NeuralNettoDetectHandWrittenDigits
-Neural Network to Detect hand written digits using python
+Neural Network to Detect Handwritten Digits using python
+This project is based on book by Michael Nielson
