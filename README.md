@@ -10,12 +10,15 @@ Various folders in this project are:
 
 1. data:  It contains the mnist database
 2. digits:  It has two folders *testing* and *myimage*
+
   1. testing: It contains various images from 0-9 that can be used for the purpose of testing the neural network
   2. myimage: It contains 9 images written by me.
 3. src: src folder has 3 files:
+
   1. mnist_loader.py: Used to load mnist data that is meant for training testing and validation. Mnist Database contains 60,000, 50,000 of them is used for training purpose and rest 10,000 is used for validation and testing
   2. network1.py: Naive neural network uses concept of **cost function**, **backpropagation** and **stochastic gradient descent**
   3. network2.py: Advancement of network1.py has additional feature **overfitting** and **crossEntropyCost function**, in addtion to features in networ1.py
+  
 4. models: It contains various models made by me, model5.txt is most efficient model of them.
 
 ### Dependencies
@@ -42,7 +45,7 @@ The easiest way is to cd to src directory where the python files are located. Th
 4. import network2 #This step is used to import network2.py
 5. **>>>** net = network2.Network([784, 30, 10], cost=network2.CrossEntropyCost) # This step creates a neural network with 784 neuron in input layer, 30 neuron in 1st hidden layer, 10 neuron in output layer
 6. **>>>** net.SGD(training_data, 30, 10, 0.5,<br>
-  ... lmbda = 5.0,<br>         
+  ... lmbda = 5.0,<br>
   ... filename=("../models/modelx.txt")<br>
   ... evaluation_data=validation_data,<br>
   ... monitor_evaluation_accuracy=True,<br>
