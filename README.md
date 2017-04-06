@@ -69,4 +69,4 @@ To load and test the image we follow following steps:
 3. **>>>** import mnist_loader
 4. **>>>** test_against = mnist_loader.imageread("../filepath/filename_of_image")
 5. **>>>** import network2
-6. **>>>** network2.load(test_against, "../modelpath/modelname.txt") #modelpath is where the model was saved...
+6. **>>>** network2.load(test_against, "../modelpath/modelname.txt") #modelpath is where the model was saved
