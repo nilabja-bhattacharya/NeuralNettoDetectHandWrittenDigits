@@ -61,10 +61,10 @@ def imageread(filepath):
     #print iar
     test_against = np.reshape(iar,(784,1)).astype('float32')/255
     #print test_against
-    #low_value_indices = test_against < 0.3
-    #test_against[low_value_indices] = 0.0
-    #high_value_indices = test_against >= 0.3
-    #test_against[high_value_indices] = 1.0
+    low_value_indices = test_against < 0.2
+    test_against[low_value_indices] = 0.0
+    high_value_indices = test_against >= 0.2
+    test_against[high_value_indices] = 1.0
     #img1 = Image.fromarray(test_against.reshape(28,28))
     #img1.show()
     #print test_against
