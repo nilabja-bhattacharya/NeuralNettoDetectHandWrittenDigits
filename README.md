@@ -38,10 +38,10 @@ Running is based on the steps:
 The easiest way is to cd to src directory where the python files are located. Then run:
 
 1. python
-2. **>>>** import mnist_loader  #This step is used to import mnist_loader.py
-3. **>>>** training, validation, testing = mnist_loader.load_data_wrapper() #This step is used to load training validation and testing data
+2. **>>>** import mnist_loader                                                  #This step is used to import mnist_loader.py
+3. **>>>** training, validation, testing = mnist_loader.load_data_wrapper()     #This step is used to load training validation and testing data
 4. import network2 #This step is used to import network2.py
-5. **>>>** net = network2.Network([784, 30, 10], cost=network2.CrossEntropyCost) # This step creates a neural network with 784 neuron in input layer, 30 neuron in 1st hidden layer, 10 neuron in output layer
+5. **>>>** net = network2.Network([784, 30, 10], cost=network2.CrossEntropyCost) #This step creates a neural network with 784 neuron in input layer, 30 neuron in 1st hidden layer, 10 neuron in output layer
 6. **>>>** net.SGD(training_data, 30, 10, 0.5,<br>
   ... lmbda = 5.0,<br>
   ... filename=("../models/modelx.txt")<br>
