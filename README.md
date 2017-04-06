@@ -74,4 +74,4 @@ To load and test the image we follow following steps:
 To predict the interger written in image
 
 1. **>>>** import network2
-2. **>>>** network2.load(test_against, "../modelpath/modelname.txt") #modelpath is where the model was saved
+2. **>>>** network2.load(test_against, filename="../modelpath/modelname.txt") #modelpath is where the model was saved
