@@ -1,0 +1,63 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CrossEntropyCost	../src/network2.py	/^class CrossEntropyCost(object):$/;"	kind:class	line:36
+Image	../src/mnist_loader.py	/^from PIL import Image$/;"	kind:namespace	line:9
+Network	../src/network1.py	/^class Network(object):$/;"	kind:class	line:21
+Network	../src/network2.py	/^class Network(object):$/;"	kind:class	line:62
+PIL	../src/mnist_loader.py	/^import PIL$/;"	kind:namespace	line:8
+QuadraticCost	../src/network2.py	/^class QuadraticCost(object):$/;"	kind:class	line:20
+SGD	../src/network1.py	/^    def SGD(self, training_data, epochs, mini_batch_size, eta,$/;"	kind:member	line:46
+SGD	../src/network2.py	/^    def SGD(self, training_data, epochs, mini_batch_size, eta,$/;"	kind:member	line:117
+__init__	../src/network1.py	/^    def __init__(self, sizes):$/;"	kind:member	line:23
+__init__	../src/network2.py	/^    def __init__(self, sizes, cost=CrossEntropyCost):$/;"	kind:member	line:64
+accuracy	../src/network2.py	/^    def accuracy(self, data, convert=False):$/;"	kind:member	line:236
+backprop	../src/network1.py	/^    def backprop(self, x, y):$/;"	kind:member	line:93
+backprop	../src/network2.py	/^    def backprop(self, x, y):$/;"	kind:member	line:202
+cPickle	../src/mnist_loader.py	/^import cPickle$/;"	kind:namespace	line:6
+cost_derivative	../src/network1.py	/^    def cost_derivative(self, output_activations, y):$/;"	kind:member	line:144
+default_weight_initializer	../src/network2.py	/^    def default_weight_initializer(self):$/;"	kind:member	line:80
+delta	../src/network2.py	/^    def delta(z, a, y):$/;"	kind:member	line:31
+delta	../src/network2.py	/^    def delta(z, a, y):$/;"	kind:member	line:51
+evaluate	../src/network1.py	/^    def evaluate(self, test_data):$/;"	kind:member	line:128
+feedforward	../src/network1.py	/^    def feedforward(self, a):$/;"	kind:member	line:40
+feedforward	../src/network2.py	/^    def feedforward(self, a):$/;"	kind:member	line:111
+fn	../src/network2.py	/^    def fn(a, y):$/;"	kind:member	line:23
+fn	../src/network2.py	/^    def fn(a, y):$/;"	kind:member	line:39
+gzip	../src/mnist_loader.py	/^import gzip$/;"	kind:namespace	line:7
+imageread	../src/mnist_loader.py	/^def imageread(filepath):$/;"	kind:function	line:52
+json	../src/network1.py	/^import json$/;"	kind:namespace	line:15
+json	../src/network2.py	/^import json$/;"	kind:namespace	line:12
+large_weight_initializer	../src/network2.py	/^    def large_weight_initializer(self):$/;"	kind:member	line:97
+load	../src/network1.py	/^def load(test_against,filename=None):$/;"	kind:function	line:161
+load	../src/network2.py	/^def load(test_against,filename=None):$/;"	kind:function	line:306
+load_data	../src/mnist_loader.py	/^def load_data():$/;"	kind:function	line:13
+load_data_wrapper	../src/mnist_loader.py	/^def load_data_wrapper():$/;"	kind:function	line:30
+matplotlib	../src/mnist_loader.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:10
+mnist_loader.py	../src/mnist_loader.py	1;"	kind:file	line:1
+network1.py	../src/network1.py	1;"	kind:file	line:1
+network2.py	../src/network2.py	1;"	kind:file	line:1
+np	../src/mnist_loader.py	/^import numpy as np$/;"	kind:namespace	line:11
+np	../src/network1.py	/^import numpy as np$/;"	kind:namespace	line:19
+np	../src/network2.py	/^import numpy as np$/;"	kind:namespace	line:17
+plt	../src/mnist_loader.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:10
+random	../src/network1.py	/^import random$/;"	kind:namespace	line:14
+random	../src/network2.py	/^import random$/;"	kind:namespace	line:13
+result	../src/network1.py	/^    def result(self,test_against=None):$/;"	kind:member	line:137
+result	../src/network2.py	/^    def result(self,test_against=None):$/;"	kind:member	line:267
+save	../src/network1.py	/^    def save(self, filename=None):$/;"	kind:member	line:149
+save	../src/network2.py	/^    def save(self, filename=None):$/;"	kind:member	line:294
+sigmoid	../src/network1.py	/^def sigmoid(z):$/;"	kind:function	line:178
+sigmoid	../src/network2.py	/^def sigmoid(z):$/;"	kind:function	line:333
+sigmoid_prime	../src/network1.py	/^def sigmoid_prime(z):$/;"	kind:function	line:186
+sigmoid_prime	../src/network2.py	/^def sigmoid_prime(z):$/;"	kind:function	line:341
+sys	../src/network1.py	/^import sys$/;"	kind:namespace	line:16
+sys	../src/network2.py	/^import sys$/;"	kind:namespace	line:14
+total_cost	../src/network2.py	/^    def total_cost(self, data, lmbda, convert=False):$/;"	kind:member	line:278
+update_mini_batch	../src/network1.py	/^    def update_mini_batch(self, mini_batch, eta):$/;"	kind:member	line:78
+update_mini_batch	../src/network2.py	/^    def update_mini_batch(self, mini_batch, eta, lmbda, n):$/;"	kind:member	line:183
+vectorized_result	../src/network2.py	/^def vectorized_result(j):$/;"	kind:function	line:323
+vectorized_results	../src/mnist_loader.py	/^def vectorized_results(j):$/;"	kind:function	line:73
